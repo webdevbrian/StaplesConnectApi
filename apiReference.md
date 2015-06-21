@@ -4,10 +4,12 @@
 
 https://my.staples-connect.com/portal/api/
 
+The current portal looks to be built on AngularJS with Symfony.
+
 ***
 
 ###user
-**user.status** : Returns 0 when logged in
+**user.status** : Returns 0 when logged in ?
 
 **user.body** : Contains user details
 
@@ -51,7 +53,7 @@ https://my.staples-connect.com/portal/api/
 
 ***
 ###hub
-**hub.status** : Returns 0 when logged in
+**hub.status** : Returns 0 when logged in ?
 
 **hub.body** : Contains hub information
 
@@ -71,7 +73,7 @@ https://my.staples-connect.com/portal/api/
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**hub.body.controllers.identifier** : Assuming manufatured number of hub. This number is the same number that shows in the hub.body.controllers.name.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**hub.body.controllers.hwVersion** : Returns hardware version? Currently returns "40" (June 21,2015).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**hub.body.controllers.hwVersion** : Returns hardware version? Currently returns "40" (June 21,2015). In the web-app code there was reference that the D-link version was "40" and there could have (maybe will be?) a "Linksys" version which could return "30".
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**hub.body.controllers.marketingBrandId** : Returns 0. Looks like D-link was maybe going to market the hardware to a couple different brands, and this is how they flip the naming / branding depending on which number is indicated?
 
@@ -79,12 +81,24 @@ https://my.staples-connect.com/portal/api/
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**hub.body.controllers.features.wifi** : Returns True or False. If the controller has wifi or not.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**hub.body.controllers.features.light_color** : Only found returns so far are "yellow" and "green". Color of status / connectivity light?
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**hub.body.controllers.features.light_color** : So far can return "green" or "blue". Green apparently for D-link and blue for Linksys. Interesting.
 
+***
+###device
 
+**device.status** : Returns 0 when logged in ?
 
+**device.body**
 
+&nbsp;&nbsp;&nbsp;&nbsp;**device.body.devices** : Returns array for each device in account
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**device.body.devices.deviceGuid** : Returns device GUID
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**device.body.devices.lastAccess** : Returns last device access to hub ex: *2015-06-19 23:46:20*.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**device.body.devices.description** : Description of device as named from the device. E.g. "Tony's iPhone"
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**device.body.devices.authorized** : Returns True or False.
 
 
 
