@@ -1,4 +1,4 @@
-#Unofficial API Reference
+# Unofficial API Reference
 ##Updates as I find new things
 **Last updated: June 21, 2015 : 12:13AM**
 
@@ -8,7 +8,7 @@ The current portal looks to be built on AngularJS with Symfony.
 
 ***
 
-###user
+### user
 **user.status** : Returns 0 when logged in ?
 
 **user.body** : Contains user details
@@ -52,7 +52,7 @@ The current portal looks to be built on AngularJS with Symfony.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **user.body.email** : Email of user
 
 ***
-###hub
+### hub
 **hub.status** : Returns 0 when logged in ?
 
 **hub.body** : Contains hub information
@@ -84,7 +84,7 @@ The current portal looks to be built on AngularJS with Symfony.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**hub.body.controllers.features.light_color** : So far can return "green" or "blue". Green apparently for D-link and blue for Linksys. Interesting.
 
 ***
-###device
+### device
 
 **device.status** : Returns 0 when logged in ?
 
